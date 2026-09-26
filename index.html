@@ -175,202 +175,123 @@
     line-height:1.6;
     margin:0;
 }
-/* =========================================================
+ /* =========================================================
    MEMBERSHIP SECTION
    ========================================================= */
 
 .membership-redesign {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  padding: 70px 0 80px;
+    /* Background image */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("./membership-bg.jpg");
 
-  /*
-     BACKGROUND IMAGE
-     Slightly dark, but image remains visible
-  */
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.58),
-      rgba(0, 0, 0, 0.58)
-    ),
-    url("membership-bg.jpg") center center / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0 110px;
 }
 
 
 /* =========================================================
-   CONTENT WRAPPER
+   MAIN CONTAINER
    ========================================================= */
 
 .membership-redesign .wrap {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 
-  width: min(1200px, 92%);
-
-  margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 
 /* =========================================================
-   MEMBERSHIP HEADING
+   HEADING
    ========================================================= */
 
 .membership-heading {
-  margin-bottom: 42px;
+    margin-bottom: 55px;
 }
-
-
-/* Small "Membership" text */
 
 .membership-heading .eyebrow {
-  margin: 0 0 8px;
+    margin: 0 0 12px;
 
-  color: #d8a900;
+    color: #d6a900;
 
-  font-size: 14px;
-  font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
 
-  letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
-
-
-/* Main heading */
 
 .membership-heading h2 {
-  margin: 0;
-
-  max-width: 800px;
-
-  color: #ffffff;
-
-  font-family: "Anton", sans-serif;
-
-  font-size: clamp(42px, 5vw, 68px);
-
-  font-weight: 400;
-
-  line-height: 0.98;
-
-  text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: 0.5px;
 }
-
-
-/* Description */
-
-.membership-heading > p:last-child {
-  margin: 18px 0 0;
-
-  max-width: 620px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 15px;
-
-  line-height: 1.6;
-}
-
 
 /* =========================================================
-   MEMBERSHIP CARDS GRID
+   MEMBERSHIP CARDS
    ========================================================= */
 
 .membership-cards {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-  gap: 16px;
-
-  align-items: stretch;
+    gap: 18px;
 }
 
 
 /* =========================================================
-   MEMBERSHIP CARD
-   SILVERY / DARK GLASS LOOK
+   CARD
    ========================================================= */
 
 .membership-card {
-  position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 370px;
+    padding: 26px 22px 22px;
 
-  min-height: 395px;
+    /* DARK GLASS BOX — like the reference image */
+    background: rgba(25, 25, 25, 0.72);
 
-  padding: 24px 22px 22px;
+    /* Subtle grey border */
+    border: 1px solid rgba(180, 180, 180, 0.25);
 
-  display: flex;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.45);
 
-  flex-direction: column;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
-  box-sizing: border-box;
-
-
-  /*
-     SILVERY DARK BACKGROUND
-  */
-  background: rgba(70, 70, 70, 0.48);
-
-
-  /*
-     LIGHT SILVER BORDER
-  */
-  border: 1px solid rgba(220, 220, 220, 0.30);
-
-
-  /*
-     SLIGHT GLASS EFFECT
-  */
-  backdrop-filter: blur(5px);
-
-  -webkit-backdrop-filter: blur(5px);
-
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
-
-
-/* =========================================================
-   ALL FOUR CARDS SAME SILVERY LOOK
-   ========================================================= */
-
-.membership-card:nth-child(1),
-.membership-card:nth-child(2),
-.membership-card:nth-child(3),
-.membership-card:nth-child(4) {
-
-  background: rgba(70, 70, 70, 0.48);
-
-  border: 1px solid rgba(220, 220, 220, 0.30);
-}
-
 
 /* =========================================================
    CARD HOVER
    ========================================================= */
 
 .membership-card:hover {
+    transform: translateY(-5px);
 
-  transform: translateY(-5px);
+    border-color: rgba(214, 169, 0, 0.65);
 
-  background: rgba(82, 82, 82, 0.55);
-
-  border-color: rgba(216, 169, 0, 0.70);
-}
-
-
-/* =========================================================
-   1 YEAR CARD
-   SUBTLE GOLD BORDER
-   ========================================================= */
-
-.membership-card:nth-child(4) {
-
-  border-color: rgba(216, 169, 0, 0.70);
+    background: rgba(15, 15, 15, 0.94);
 }
 
 
@@ -379,14 +300,12 @@
    ========================================================= */
 
 .membership-card-top {
+    display: flex;
+    align-items: center;
 
-  display: flex;
+    gap: 14px;
 
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 
@@ -395,34 +314,27 @@
    ========================================================= */
 
 .membership-icon {
+    width: 42px;
+    height: 42px;
 
-  width: 42px;
+    flex-shrink: 0;
 
-  height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  flex: 0 0 42px;
+    border: 1px solid rgba(214, 169, 0, 0.65);
 
-  display: flex;
+    border-radius: 50%;
 
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: rgba(190, 150, 0, 0.12);
-
-  border: 1px solid rgba(210, 170, 0, 0.55);
+    background: rgba(214, 169, 0, 0.08);
 }
 
-
 .membership-icon svg {
+    width: 20px;
+    height: 20px;
 
-  width: 21px;
-
-  height: 21px;
-
-  stroke: #d8a900;
+    stroke: #d6a900;
 }
 
 
@@ -431,16 +343,12 @@
    ========================================================= */
 
 .plan-title {
+    margin: 0;
 
-  margin: 0;
+    color: #ffffff;
 
-  color: #ffffff;
-
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 17px;
-
-  font-weight: 700;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 
@@ -449,56 +357,43 @@
    ========================================================= */
 
 .membership-price {
+    display: flex;
+    align-items: baseline;
 
-  display: flex;
+    gap: 7px;
 
-  align-items: baseline;
-
-  gap: 7px;
-
-  margin-top: 4px;
+    margin-bottom: 4px;
 }
-
 
 .membership-price strong {
+    color: #ffffff;
 
-  color: #ffffff;
+    font-size: 38px;
+    line-height: 1;
 
-  font-family: "Anton", sans-serif;
-
-  font-size: 38px;
-
-  font-weight: 400;
-
-  line-height: 1;
+    font-weight: 900;
 }
 
-
 .membership-price span {
+    color: rgba(255, 255, 255, 0.65);
 
-  color: rgba(255, 255, 255, 0.65);
-
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 13px;
+    font-size: 13px;
 }
 
 
 /* =========================================================
-   SAVING / SMALL DESCRIPTION
+   SAVING / DESCRIPTION
    ========================================================= */
 
 .membership-saving {
+    min-height: 20px;
 
-  margin: 8px 0 22px;
+    margin: 8px 0 20px;
 
-  color: #d8a900;
+    color: #d6a900;
 
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 12px;
-
-  font-weight: 700;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 
@@ -507,16 +402,13 @@
    ========================================================= */
 
 .membership-card hr {
+    width: 100%;
 
-  width: 100%;
+    margin: 0 0 18px;
 
-  height: 1px;
+    border: 0;
 
-  margin: 0 0 20px;
-
-  border: 0;
-
-  background: rgba(255, 255, 255, 0.20);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 
@@ -525,52 +417,38 @@
    ========================================================= */
 
 .membership-features {
+    display: flex;
+    flex-direction: column;
 
-  display: flex;
+    gap: 12px;
 
-  flex-direction: column;
+    margin: 0 0 25px;
+    padding: 0;
 
-  gap: 12px;
-
-  margin: 0;
-
-  padding: 0;
-
-  list-style: none;
+    list-style: none;
 }
-
 
 .membership-features li {
+    position: relative;
 
-  position: relative;
+    padding-left: 18px;
 
-  padding-left: 18px;
+    color: rgba(255, 255, 255, 0.78);
 
-  color: rgba(255, 255, 255, 0.78);
-
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 13px;
-
-  line-height: 1.4;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
-
 .membership-features li::before {
+    content: "✓";
 
-  content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
 
-  position: absolute;
+    color: #d6a900;
 
-  left: 0;
-
-  top: 0;
-
-  color: #d8a900;
-
-  font-size: 13px;
-
-  font-weight: 700;
+    font-weight: 700;
 }
 
 
@@ -579,123 +457,119 @@
    ========================================================= */
 
 .membership-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  display: flex;
+    width: 100%;
 
-  align-items: center;
+    min-height: 44px;
 
-  justify-content: center;
+    margin-top: auto;
 
-  width: 100%;
+    border: 1px solid #d6a900;
+    border-radius: 30px;
 
-  min-height: 42px;
+    background: transparent;
 
-  margin-top: auto;
+    color: #ffffff;
 
-  box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 800;
 
-  border: 1px solid #d8a900;
+    text-decoration: none;
 
-  border-radius: 25px;
-
-  background: transparent;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  font-family: "Work Sans", sans-serif;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 0.2px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
-
-
-/* =========================================================
-   BUTTON HOVER
-   ========================================================= */
 
 .membership-button:hover {
+    background: #d6a900;
 
-  background: #d8a900;
+    color: #000000;
 
-  border-color: #d8a900;
-
-  color: #111111;
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1000px) {
 
-  .membership-cards {
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-  }
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+@media (max-width: 600px) {
 
+    .membership-redesign {
+        padding: 75px 0 80px;
+
+        background-position: center;
+    }
+
+    .membership-redesign .wrap {
+        padding: 0 18px;
+    }
+
+    .membership-heading {
+        margin-bottom: 40px;
+    }
+
+    .membership-heading h2 {
+        font-size: 40px;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .membership-card {
+        min-height: auto;
+    }
+
+}
 @media (max-width: 600px) {
 
   .membership-redesign {
-
-    padding: 55px 0 70px;
+    padding: 65px 0 80px;
   }
 
-
   .membership-redesign .wrap {
-
     width: 90%;
   }
 
-
   .membership-heading {
-
     margin-bottom: 40px;
   }
 
-
   .membership-heading h2 {
-
     font-size: 42px;
   }
 
-
   .membership-cards {
-
     grid-template-columns: 1fr;
 
     gap: 16px;
   }
 
-
   .membership-card {
-
-    min-height: 380px;
+    min-height: 330px;
 
     padding: 28px 22px 22px;
   }
 
-}  0 0 35px rgba(212, 160, 23, 0.22);
 }
+
   /* FACILITIES */
   .fac-strip{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0;}
   .fac-item{display:flex;align-items:center;gap:14px;flex:1 1 200px;}
@@ -715,7 +589,7 @@
 
   /* VISIT */
   .visit{display:grid;grid-template-columns:1fr .85fr;gap:64px;align-items:start;}
-  @media(max-width:900px){.visit{grid-template-columns:1fr;gap:40px;}}
+  @media(max-width:900px){.visit{grid-template-columns:1fr;gap:40px;} .directions-block{margin-top:0 !important;}}
   .visit-list{list-style:none;padding:0;margin:28px 0 0;}
   .visit-list li{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line);}
   .visit-list li:last-child{border-bottom:1px solid var(--line);}
@@ -884,166 +758,133 @@
       <p>General conditioning for stamina, mobility and everyday fitness, coached at every session.</p>
     </div>
   </div>
-<!-- MEMBERSHIP -->
+<!-- =========================================================
+     MEMBERSHIP SECTION
+     ========================================================= -->
+
 <section class="membership-redesign" id="membership">
-    <div class="wrap">
 
-        <div class="membership-heading">
-            <p class="eyebrow">Membership</p>
+  <div class="wrap">
 
-            <h2>Simple pricing, no hidden charges</h2>
+    <div class="membership-heading">
+      <p class="eyebrow">Membership</p>
 
-            <p class="lead">
-                Choose a plan that fits your fitness goals and start your journey
-                with The Fitness House.
-            </p>
-        </div>
-
-
-        <div class="membership-cards">
-
-            <!-- 1 MONTH -->
-            <div class="membership-card">
-
-                <div class="membership-card-top">
-                    <div class="membership-icon">🏋️</div>
-                    <h3 class="plan-title">1 Month</h3>
-                </div>
-
-                <div class="membership-price">
-                    ₹700 <span>/ month</span>
-                </div>
-
-                <div class="membership-saving">
-                    Perfect for getting started
-                </div>
-
-                <div class="membership-divider"></div>
-
-                <ul class="membership-features">
-                    <li>Full gym access</li>
-                    <li>Trainer guidance</li>
-                    <li>Strength &amp; cardio equipment</li>
-                </ul>
-
-                <a
-                    class="membership-button"
-                    href="https://wa.me/917385846525?text=Hello%2C%20I%20want%20to%20join%20the%201%20Month%20membership."
-                    target="_blank"
-                >
-                    JOIN NOW →
-                </a>
-
-            </div>
-
-
-            <!-- 3 MONTHS -->
-            <div class="membership-card">
-
-                <div class="membership-card-top">
-                    <div class="membership-icon">🔥</div>
-                    <h3 class="plan-title">3 Months</h3>
-                </div>
-
-                <div class="membership-price">
-                    ₹2,000 <span>/ 3 months</span>
-                </div>
-
-                <div class="membership-saving">
-                    ₹667 per month
-                </div>
-
-                <div class="membership-divider"></div>
-
-                <ul class="membership-features">
-                    <li>Full gym access</li>
-                    <li>Trainer guidance</li>
-                    <li>Strength &amp; cardio equipment</li>
-                </ul>
-
-                <a
-                    class="membership-button"
-                    href="https://wa.me/917385846525?text=Hello%2C%20I%20want%20to%20join%20the%203%20Months%20membership."
-                    target="_blank"
-                >
-                    JOIN NOW →
-                </a>
-
-            </div>
-
-
-            <!-- 6 MONTHS -->
-            <div class="membership-card">
-
-                <div class="membership-card-top">
-                    <div class="membership-icon">💪</div>
-                    <h3 class="plan-title">6 Months</h3>
-                </div>
-
-                <div class="membership-price">
-                    ₹4,000 <span>/ 6 months</span>
-                </div>
-
-                <div class="membership-saving">
-                    ₹667 per month
-                </div>
-
-                <div class="membership-divider"></div>
-
-                <ul class="membership-features">
-                    <li>Full gym access</li>
-                    <li>Trainer guidance</li>
-                    <li>Strength &amp; cardio equipment</li>
-                </ul>
-
-                <a
-                    class="membership-button"
-                    href="https://wa.me/917385846525?text=Hello%2C%20I%20want%20to%20join%20the%206%20Months%20membership."
-                    target="_blank"
-                >
-                    JOIN NOW →
-                </a>
-
-            </div>
-
-
-            <!-- 1 YEAR -->
-            <div class="membership-card">
-
-                <div class="membership-card-top">
-                    <div class="membership-icon">🏆</div>
-                    <h3 class="plan-title">1 Year</h3>
-                </div>
-
-                <div class="membership-price">
-                    ₹8,000 <span>/ year</span>
-                </div>
-
-                <div class="membership-saving">
-                    ₹667 per month · Save ₹400
-                </div>
-
-                <div class="membership-divider"></div>
-
-                <ul class="membership-features">
-                    <li>Full gym access</li>
-                    <li>Trainer guidance</li>
-                    <li>Strength &amp; cardio equipment</li>
-                </ul>
-
-                <a
-                    class="membership-button"
-                    href="https://wa.me/917385846525?text=Hello%2C%20I%20want%20to%20join%20the%201%20Year%20membership."
-                    target="_blank"
-                >
-                    JOIN NOW →
-                </a>
-
-            </div>
-
-        </div>
+      <h2>Simple pricing, no hidden charges</h2>
     </div>
-</section>
+
+
+    <div class="membership-cards">
+
+      <!-- 1 MONTH -->
+      <div class="membership-card">
+
+        <p class="plan-title">1 Month</p>
+
+        <div class="membership-price">
+          <strong>₹700</strong>
+        </div>
+
+        <hr>
+
+        <ul class="membership-features">
+          <li>Full gym access</li>
+          <li>Trainer guidance</li>
+        </ul>
+
+        <a
+          class="membership-button"
+          href="https://wa.me/917385846525?text=Hi%2C%20I%27d%20like%20to%20join%20the%201%20month%20plan"
+          target="_blank"
+          rel="noopener">
+          JOIN NOW →
+        </a>
+
+      </div>
+
+
+      <!-- 3 MONTHS -->
+      <div class="membership-card">
+
+        <p class="plan-title">3 Months</p>
+
+        <div class="membership-price">
+          <strong>₹2,000</strong>
+        </div>
+
+        <hr>
+
+        <ul class="membership-features">
+          <li>Full gym access</li>
+          <li>Trainer guidance</li>
+        </ul>
+
+        <a
+          class="membership-button"
+          href="https://wa.me/917385846525?text=Hi%2C%20I%27d%20like%20to%20join%20the%203%20month%20plan"
+          target="_blank"
+          rel="noopener">
+          JOIN NOW →
+        </a>
+
+      </div>
+
+
+      <!-- 6 MONTHS -->
+      <div class="membership-card">
+
+        <p class="plan-title">6 Months</p>
+
+        <div class="membership-price">
+          <strong>₹4,000</strong>
+        </div>
+
+        <hr>
+
+        <ul class="membership-features">
+          <li>Full gym access</li>
+          <li>Trainer guidance</li>
+        </ul>
+
+        <a
+          class="membership-button"
+          href="https://wa.me/917385846525?text=Hi%2C%20I%27d%20like%20to%20join%20the%206%20month%20plan"
+          target="_blank"
+          rel="noopener">
+          JOIN NOW →
+        </a>
+
+      </div>
+
+
+      <!-- 1 YEAR -->
+      <div class="membership-card">
+
+        <p class="plan-title">1 Year</p>
+
+        <div class="membership-price">
+          <strong>₹8,000</strong>
+        </div>
+
+        <hr>
+
+        <ul class="membership-features">
+          <li>Full gym access</li>
+          <li>Trainer guidance</li>
+        </ul>
+
+        <a
+          class="membership-button"
+          href="https://wa.me/917385846525?text=Hi%2C%20I%27d%20like%20to%20join%20the%201%20year%20plan"
+          target="_blank"
+          rel="noopener">
+          JOIN NOW →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 <section id="gallery">
